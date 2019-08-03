@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-    
+
     <hr />
     <br class="clear" />
     <div class="container">
@@ -64,6 +64,7 @@
         <div class="col-10 offset-1 alert alert-danger">
           <%= flash[:error].html_safe %>
         </div>
+      <% end %>
       <%= yield %>
     </div>
     <div class="footer">
