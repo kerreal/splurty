@@ -3,10 +3,9 @@ class QuotesController < ApplicationController
     @quote = Quote.order("RANDOM()").first
   end
 
-
-
   def create
-    @quote - Quote.create(quote_params)
+    @quote = Quote.create(quote_params)
+    
     if @quote.invalid?
       flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
     end
